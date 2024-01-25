@@ -41,7 +41,7 @@ time {
 }
 
 table {
-  border-spacing: 0.5rem;
+  border-spacing: 1rem;
 }
 
 table td:nth-child(2) {
