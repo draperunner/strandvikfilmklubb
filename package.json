@@ -2,12 +2,14 @@
   "name": "strandvikfilmklubb",
   "version": "1.0.0",
   "description": "Heimesida til Strandvik filmklubb",
+  "type": "module",
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html"
   },
   "devDependencies": {
     "@parcel/reporter-bundle-buddy": "^2.10.3",
-    "parcel": "^2.10.3"
+    "parcel": "^2.10.3",
+    "sharp": "^0.33.5"
   }
 }
