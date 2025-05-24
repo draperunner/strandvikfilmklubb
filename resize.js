@@ -1,13 +1,19 @@
 import sharp from "sharp";
 
-const filePath = process.argv[2];
+const filePaths = process.argv.slice(2);
 
-if (!/\.(jpe?g|png)/.test(filePath)) {
-  console.log(`File path ${filePath} is not an image`);
-  process.exit(1);
+async function main() {
+  for (const filePath of filePaths) {
+    if (!/\.(jpe?g|png)/.test(filePath)) {
+      console.log(`File path ${filePath} is not an image`);
+      process.exit(1);
+    }
+
+    await sharp(filePath)
+      .resize(400)
+      .webp()
+      .toFile(filePath.replace(/\.\w+$/, ".webp"));
+  }
 }
 
-sharp(filePath)
-  .resize(400)
-  .webp()
-  .toFile(filePath.replace(/\.\w+$/, ".webp"));
+main();
