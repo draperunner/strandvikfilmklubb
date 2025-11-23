@@ -8,8 +8,8 @@
     "build": "parcel build src/index.html"
   },
   "devDependencies": {
-    "@parcel/reporter-bundle-buddy": "^2.15.1",
-    "parcel": "^2.15.1",
+    "@parcel/reporter-bundle-buddy": "^2.16.1",
+    "parcel": "^2.16.1",
     "sharp": "^0.33.5"
   }
 }
